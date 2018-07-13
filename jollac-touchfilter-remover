@@ -1,0 +1,13 @@
+#!/bin/bash
+
+ENVFILE="/var/lib/environment/compositor/droid-hal-device.conf"
+REMOVESTRING=":filtered:prediction=16"
+REMOVESTRING_ESCAPED=`echo $REMOVESTRING | sed "s/\:/\\\:/"`
+CONTAINS_REMOVESTRING=`cat $ENVFILE | grep $REMOVESTRING | wc -l`
+
+if [ "$CONTAINS_REMOVESTRING" != "0" ]; then
+    sed -i "s/$REMOVESTRING_ESCAPED//g" $ENVFILE
+    echo "Removed Kalman filter, proceeding."
+fi
+
+exit 0
