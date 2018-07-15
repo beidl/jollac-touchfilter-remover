@@ -1,0 +1,4 @@
+Jolla C Karman Filter Remover
+
+This tool (oneshot.d script to be exact) removes the Karman touch input prediction filter from the lipstick session.
+Those who consider the touch input prediction erroneous and experience hangs can install this package from OpenRepos.
