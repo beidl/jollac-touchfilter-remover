@@ -28,3 +28,6 @@ cp jollac-touchfilter-remover %{buildroot}%{_libdir}/oneshot.d/
 %files
 %defattr(755,root,root,-)
 %{_libdir}/oneshot.d/jollac-touchfilter-remover
+
+%postun
+%{_libdir}/oneshot.d/jollac-touchfilter-remover restore >/dev/null 2>&1 || :
