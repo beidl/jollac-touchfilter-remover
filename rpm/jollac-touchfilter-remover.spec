@@ -4,7 +4,7 @@ Name:       jollac-touchfilter-remover
 
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    Jolla C Karman Filter Remover
-Version:    0.2
+Version:    0.3
 Release:    1
 Group:      Qt/Qt
 License:    GPLv2
