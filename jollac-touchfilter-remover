@@ -12,7 +12,7 @@ if [ "$1" == "restore" ]; then
 fi
 
 if [ "$CONTAINS_REMOVESTRING" != "0" ]; then
-    sed -i "s|$REMOVESTRING||g" $ENVFILE
+    sed -i "s|${REMOVESTRING}||g" $ENVFILE
     echo "Removed Kalman filter, proceeding."
 fi
 
